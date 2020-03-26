@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display a Dog</title>
+</head>
+<body>
+    {% csrf_token %}
+    {% block content %}
+
+    <h2>Single Dog Data:</h2>
+
+    <li>Name : {{profile.name}}</li>
+    <li>Age : {{profile.age}}</li>
+    <li>Breed : {{profile.breed}}</li>
+    <li>Gender : {{profile.gender}}</li>
+    <li>Color : {{profile.color}}</li>
+    <li>FavoriteFood : {{profile.favoritefood}}</li>
+    <li>FavoriteToy : {{profile.favoritetoy}}</li>
+    <br><br>
+
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+
+    {% endblock %}
+</body>
+</html>

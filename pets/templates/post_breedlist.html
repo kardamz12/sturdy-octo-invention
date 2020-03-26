@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Dog</title>
+</head>
+<body>
+    <form action="post_breedlist" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td><label for="name">Name: </label></td>
+                <td><input type="text" name="name" placeholder="name"><br></td>
+            </tr>
+            <tr>
+                <td><label for="size">Size: </label></td>
+                <td><input type="text" name="size" placeholder="size"><br></td>
+            </tr>
+            <tr>
+                <td><label for="friendliness">Friendliness: </label></td>
+                <td><input type="text" name="friendliness" placeholder="friendliness"><br></td>
+            </tr>
+            <tr>
+                <td><label for="trainability">Trainability: </label></td>
+                <td><input type="text" name="trainability" placeholder="trainability"><br></td>
+            </tr>
+            <tr>
+                <td><label for="sheddingamount">SheddingAmount: </label></td>
+                <td><input type="text" name="sheddingamount" placeholder="sheddingamount"><br></td>
+            </tr>
+            <tr>
+                <td><label for="exerciseneeds">ExerciseNeeds: </label></td>
+                <td><input type="text" name="exerciseneeds" placeholder="exerciseneeds"><br></td>
+            </tr>
+        </table>
+        <input type="submit">
+    </form>
+
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

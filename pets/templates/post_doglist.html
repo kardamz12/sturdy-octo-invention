@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Dog</title>
+</head>
+<body>
+    <form action="post_doglist" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td><label for="name">Name: </label></td>
+                <td><input type="text" name="name" placeholder="name"><br></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age: </label></td>
+                <td><input type="text" name="age" placeholder="age"><br></td>
+            </tr>
+            <tr>
+                <td><label for="breed">Breed: </label></td>
+                <td><input type="text" name="breed" placeholder="breed"><br></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender: </label></td>
+                <td><input type="text" name="gender" placeholder="gender"><br></td>
+            </tr>
+            <tr>
+                <td><label for="color">Color: </label></td>
+                <td><input type="text" name="color" placeholder="color"><br></td>
+            </tr>
+            <tr>
+                <td><label for="favoritefood">FavoriteFood: </label></td>
+                <td><input type="text" name="favoritefood" placeholder="favoritefood"><br></td>
+            </tr>
+            <tr>
+                <td><label for="favoritetoy">FavoriteToy: </label></td>
+                <td><input type="text" name="favoritetoy" placeholder="favoritetoy"><br></td>
+            </tr>
+        </table>
+        <input type="submit">
+    </form>
+
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

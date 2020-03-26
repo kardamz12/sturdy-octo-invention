@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Dog List</title>
+</head>
+<body bgcolor="pink">
+    {% csrf_token %}
+    {% block content %}
+
+    <h2>List Of Dogs:</h2>
+
+    {% for profile in profiles %}
+    <li>Name : {{profile.name}}</li>
+    <li>Age : {{profile.age}}</li>
+    <li>Breed : {{profile.breed}}</li>
+    <li>Gender : {{profile.gender}}</li>
+    <li>Color : {{profile.color}}</li>
+    <li>FavoriteFood : {{profile.favoritefood}}</li>
+    <li>FavoriteToy : {{profile.favoritetoy}}</li>
+    <br><br>
+    {% endfor %}
+
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+
+    {% endblock %}
+</body>
+</html>

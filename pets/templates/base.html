@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check out the Options:</title>
+</head>
+<body bgcolor="grey">
+    {% csrf_token %}
+    <h2>Choose One:</h2>
+
+    <ul>
+        <li><a href="commands/get_doglist">List of Dogs</a></li><br>
+        <li><a href="commands/post_doglist">Add a Dog</a></li><br>
+        <li><a href="commands/get_breedlist">List of Breeds</a></li><br>
+        <li><a href="commands/post_breedlist">Add a Breed</a></li><br>
+    </ul>
+    <br><br>
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
