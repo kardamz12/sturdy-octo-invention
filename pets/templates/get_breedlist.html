@@ -8,6 +8,14 @@
     {% csrf_token %}
     {% block content %}
 
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+
+    <br>
+
     <h2>List Of Breeds:</h2>
 
     {% for profile in profiles %}
@@ -19,12 +27,6 @@
     <li>ExerciseNeeds : {{profile.favoritefood}}</li>
     <br><br>
     {% endfor %}
-
-    <div>
-        {% for message in messages %}
-        <h3>{{message}}</h3>
-        {% endfor %}
-    </div>
 
     {% endblock %}
 </body>
