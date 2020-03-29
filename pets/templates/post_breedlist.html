@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add Dog</title>
+    <title>Add a Breed</title>
 </head>
 <body>
     <form action="post_breedlist" method="POST">
@@ -10,8 +10,8 @@
         <table>
             {{ form.as_table }}
             <tr>
-                <td><label for="name">Name: </label></td>
-                <td><input type="text" name="name" placeholder="name"><br></td>
+                <td><label for="breed_name">Breed Name: </label></td>
+                <td><input type="text" name="breed_name" placeholder="breed_name"><br></td>
             </tr>
             <tr>
                 <td><label for="size">Size: </label></td>

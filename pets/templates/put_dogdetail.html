@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update a Dog details</title>
+</head>
+<body>
+    <form action="put_dogdetail" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td><label for="id">id: </label></td>
+                <td><input type="text" name="id" placeholder="id"><br></td>
+            </tr>
+            <tr>
+                <td><label for="name">name: </label></td>
+                <td><input type="text" name="name" placeholder="name"><br></td>
+            </tr>
+        </table>
+        <input type="submit">
+    </form>
+
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+</body>
+</html>
