@@ -34,7 +34,7 @@ def post_doglist(request):
                 instance_dog = Dog()
                 instance_dog.name = name
                 instance_dog.age = age
-                instance_dog.breed_name = breed_name
+                instance_dog.breed_name = Breed.objects.get(breed_name=breed_name)
                 instance_dog.gender = gender
                 instance_dog.color = color
                 instance_dog.favoritefood = favoritefood
@@ -45,17 +45,20 @@ def post_doglist(request):
                 queryset = Dog.objects.all()
                 return render(request, 'get_doglist.html', {"profiles": queryset})
         else:
-            return render(request, 'post_doglist.html')
+            queryset = Breed.objects.all()
+            return render(request, 'post_doglist.html', {"profiles": queryset})
     except:
         messages.info(request, 'Dog details not added(Inside except)')
 
 def get_dogdetail(request):
     try:
-        if request.method == 'POST':
-            queryset = Dog.objects.get(id=request.POST.get('id'))
-            return render(request, 'get_dog.html', {'profile': queryset})
-        else:
-            return render(request, 'get_dogdetail.html')
+        if request.method == 'GET':
+            id = request.GET.get('id')
+            if id:
+                queryset = Dog.objects.get(id=id)
+                return render(request, 'get_dog.html', {'profile': queryset})
+            else:
+                return render(request, 'get_dogdetail.html')
     except:
         messages.info(request, "Couldn't fetch the Dog details.")
 
@@ -126,11 +129,13 @@ def post_breedlist(request):
 
 def get_breeddetail(request):
     try:
-        if request.method == 'POST':
-            queryset = Breed.objects.get(id=request.POST.get('id'))
-            return render(request, 'get_breed.html', {'profile': queryset})
-        else:
-            return render(request, 'get_breeddetail.html')
+        if request.method == 'GET':
+            id = request.GET.get('id')
+            if id:
+                queryset = Breed.objects.get(id=id)
+                return render(request, 'get_breed.html', {'profile': queryset})
+            else:
+                return render(request, 'get_breeddetail.html')
     except:
         messages.info(request, "Couldn't fetch the Breed details.")
 

@@ -19,3 +19,4 @@ class Dog(models.Model):
     favoritetoy = models.CharField(max_length=100)
 
 
+

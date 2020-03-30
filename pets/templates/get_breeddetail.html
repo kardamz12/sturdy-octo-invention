@@ -5,7 +5,7 @@
     <title>Locate a Breed</title>
 </head>
 <body>
-    <form action="get_breeddetail" method="post">
+    <form action="get_breeddetail" method="get">
         {% csrf_token %}
         <table>
             {{ form.as_table }}

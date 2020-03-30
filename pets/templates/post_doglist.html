@@ -19,7 +19,13 @@
             </tr>
             <tr>
                 <td><label for="breed_name">Breed Name: </label></td>
-                <td><input type="text" name="breed_name" placeholder="breed_name"><br></td>
+                <td>
+                    <select name="breed_name">
+                    {% for profile in profiles %}
+                    <option value="{{profile.breed_name}}">{{profile.breed_name}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td><label for="gender">Gender: </label></td>
