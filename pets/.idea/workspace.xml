@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9a485a3-5030-4ef2-b0a6-06d4f3cee9be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dogs/yo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dogs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dogs/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dogs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dogs/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/get_breed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/get_breed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/get_breeddetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/get_breeddetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/get_breedlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/get_breedlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/get_dogdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/get_dogdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post_doglist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post_doglist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/put_breeddetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/put_breeddetail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +34,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Selenium/Login Empirix" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -59,6 +54,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="418" y="148" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.690@0.0.1280.690" timestamp="1585533464672" />
+    <state x="420" y="100" key="FileChooserDialogImpl" timestamp="1585794229764">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="420" y="100" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1585794229764" />
     <state x="336" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1585118549743">
       <screen x="0" y="0" width="1280" height="690" />
     </state>

@@ -3,6 +3,7 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .models import Dog, Breed
 
+
 # Create your views here.
 def base(request):
     try:
@@ -67,14 +68,17 @@ def get_dogdetail(request):
 def put_dogdetail(request):
     try:
         if request.method == 'POST':
-            queryset = Dog.objects.get(id=request.POST.get('id'))
-            queryset.name = request.POST.get('name')
-            queryset.save()
-            queryset = Dog.objects.all()
-            return render(request, 'get_doglist.html', {'profiles': queryset})
+            id = request.POST.get('id')
+            name = request.POST.get('name')
+            if id and name:
+                queryset = Dog.objects.get(id=id)
+                queryset.name = name
+                queryset.save()
+                queryset = Dog.objects.all()
+                return render(request, 'get_doglist.html', {'profiles': queryset})
         else:
             return render(request, 'put_dogdetail.html')
-    except queryset.DoesNotExist:
+    except:
         messages.info(request, "Couldn't update a Dog details.")
 
 def delete_dogdetail(request):
@@ -142,14 +146,17 @@ def get_breeddetail(request):
 def put_breeddetail(request):
     try:
         if request.method == 'POST':
-            queryset = Breed.objects.get(id=request.POST.get('id'))
-            queryset.name = request.POST.get('name')
-            queryset.save()
-            queryset = Breed.objects.all()
-            return render(request, 'get_breedlist.html', {'profiles': queryset})
+            id = request.POST.get('id')
+            breed_name = request.POST.get('breed_name')
+            if id and breed_name:
+                queryset = Breed.objects.get(id=id)
+                queryset.breed_name = breed_name
+                queryset.save()
+                queryset = Breed.objects.all()
+                return render(request, 'get_breedlist.html', {'profiles': queryset})
         else:
             return render(request, 'put_breeddetail.html')
-    except queryset.DoesNotExist:
+    except:
         messages.info(request, "Couldn't update a Breed details.")
 
 def delete_breeddetail(request):
